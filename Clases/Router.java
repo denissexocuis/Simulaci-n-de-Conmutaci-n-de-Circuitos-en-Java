@@ -2,16 +2,17 @@
 
 import java.util.ArrayList;
 
-public class Router
+public class Router extends Dispositivo
 {
     private int ID_Router;
-    private ArrayList<Host> HostsConectados;
+    private ArrayList<Dispositivo> Conexiones;
 
     //* constructor
-    public Router(int id)
+    public Router(int id, String name)
     {
+        super(name);
         this.ID_Router = id;
-        this.HostsConectados = new ArrayList<Host>();
+        this.Conexiones = new ArrayList<>();
     }
 
     public int getHost()
@@ -21,7 +22,7 @@ public class Router
 
     public String getHostConectados()
     {
-        return this.HostsConectados.toString();
+        return this.Conexiones.toString();
     }
 
 }

@@ -1,17 +1,16 @@
 import java.net.InetAddress;
 
 //* clase padre 'host'
-public abstract class Host
+public abstract class Host extends Dispositivo
 {
     public InetAddress HostIP;
     public int Port;
-    public String Hostname;
 
     public Host(InetAddress HostIp, int port, String name)
     {
+        super(name);
         this.HostIP = HostIp;
         this.Port = port;
-        this.Hostname = name;
     }
 
     //? getters
@@ -28,11 +27,6 @@ public abstract class Host
     public int getPort()
     {
         return this.Port;
-    }
-
-    public String getHostname()
-    {
-        return this.Hostname;
     }
 
 }
